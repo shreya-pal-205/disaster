@@ -182,10 +182,10 @@ const VirtualDrills = () => {
           ))}
         </div>
 
-        {/* AR Drill Interface */}
+        {/* AR Drill Interface Popup */}
         {isARActive && selectedDrill && (
           <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-            <div className="bg-white rounded-xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="bg-white rounded-xl max-w-5xl w-full mx-4 max-h-[90vh] overflow-y-auto">
               <div className="p-6">
                 <div className="flex justify-between items-center mb-6">
                   <h2 className="text-2xl font-bold text-black">AR Drill: {selectedDrill.title}</h2>
@@ -197,17 +197,17 @@ const VirtualDrills = () => {
                   </button>
                 </div>
 
-                {/* AR Camera View Simulation */}
-                <div className="bg-gray-900 rounded-lg p-8 mb-6 text-center">
-                  <Camera className="h-16 w-16 text-white mx-auto mb-4" />
-                  <h3 className="text-white text-xl mb-2">AR Camera View</h3>
-                  <p className="text-gray-300 mb-4">Point your camera at your surroundings to begin the drill</p>
-                  <div className="bg-orange-400 text-black px-6 py-2 rounded-lg inline-block">
-                    WebAR Session Active
-                  </div>
+                {/* Embedded MyWebAR 3D AR Scene */}
+                <div className="bg-gray-900 rounded-lg overflow-hidden mb-6">
+                  <iframe
+                    src="https://mywebar.com/p/Project_1_67rth7nydh"
+                    title="MyWebAR Drill"
+                    className="w-full h-[500px] border-0"
+                    allow="camera; microphone; gyroscope; accelerometer; fullscreen"
+                  />
                 </div>
 
-                {/* Drill Steps */}
+                {/* Drill Steps & AR Features */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="text-lg font-bold text-black mb-4">Drill Steps:</h3>

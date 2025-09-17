@@ -7,6 +7,7 @@ import VirtualDrills from './components/VirtualDrills';
 import SafetyGames from './components/SafetyGames';
 import EmergencyContacts from './components/EmergencyContacts';
 import AdminDashboard from './components/AdminDashboard';
+import ChatBot from './components/ChatBot';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -25,6 +26,8 @@ function App() {
         return <SafetyGames />;
       case 'contacts':
         return <EmergencyContacts />;
+      case 'chat-bot':
+        return <ChatBot />;
       case 'dashboard':
         return <AdminDashboard />;
       default:

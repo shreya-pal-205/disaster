@@ -16,6 +16,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection
     { id: 'drills', label: 'Virtual Drills' },
     { id: 'games', label: 'Safety Games' },
     { id: 'contacts', label: 'Emergency Contacts' },
+    { id: 'chat-bot', label: 'ChatBot' },
     { id: 'dashboard', label: 'Admin Dashboard' },
   ];
 
